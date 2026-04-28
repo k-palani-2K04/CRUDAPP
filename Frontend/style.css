@@ -31,12 +31,17 @@ td button{
 }
 a{
     text-decoration: none;
-    width: 30%;
+    width: 20%;
     text-align: center;
     color:white;
     background-color: red;
     padding: 0 10px;
-    margin: 0 0 0 20px ;
+    margin: 2px 0 0 20px ;
     border-radius: 2px;
     border: 2px black solid;
+    height: fit-content;
+}
+.center{
+    display: flex;
+    justify-content: space-around;
 }
