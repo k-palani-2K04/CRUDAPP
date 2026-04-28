@@ -8,7 +8,7 @@ async function loader(){
             <td>${user.name}</td>
             <td>${user.email}</td>
             <td>${user.age}</td>
-            <td>
+            <td class="center">
                 <button onclick="editUser('${user.name}','${user.email}','${user.age}','${user._id}')">Edit</button>
                 <a href='/delete/${user._id}' onclick="return confirm('Are you sure to delete this one!')">Delete</a>
             </td>
