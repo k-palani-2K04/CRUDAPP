@@ -30,25 +30,25 @@ app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'Frontend','index.html'));
 });
 //to retrieve data from the DB and send to the client
-app.get('/users',async (req,res)=>{
+app.get('https://crudapp-9rul.onrender.com/users',async (req,res)=>{
     const users = await User.find();
     res.json(users);
 })
 
 //To retrieve data from client and save in Datase
-app.post('/add',async (req,res)=>{
+app.post('https://crudapp-9rul.onrender.com/add',async (req,res)=>{
     await User.create(req.body);
     res.redirect('/');
 });
 
 //Delete the document in the Database
-app.get('/delete/:id',async (req,res)=>{
+app.get('https://crudapp-9rul.onrender.com/delete/:id',async (req,res)=>{
     await User.findByIdAndDelete(req.params.id);
     res.redirect('/');
 });
 
 //Edit and Updatee the data
-app.post('/update/:id',async (req,res)=>{
+app.post('https://crudapp-9rul.onrender.com/update/:id',async (req,res)=>{
     let updatedData = req.body;
     let id = req.params.id;
     await User.findByIdAndUpdate(id,updatedData);
