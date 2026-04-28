@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD DASHBOARD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>CRUD DASHBOARD</h2>
+    <div class="container">
+        <form action="/add" method="POST" id="form">
+            <input type="text" placeholder="Enter Your Name" name="name" required>
+            <input type="email" placeholder="Enter Your Email" name="email" required>
+            <input type="number" placeholder="Enter Your Age" name="age" required min="0" max="100"> 
+            <button id="submitbtn">Submit</button>
+        </form>
+    </div>
+    <br>
+    <hr>
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+        </tbody>
+    </table>
+    <script src="handCrud.js"></script>
+</body>
+</html>
